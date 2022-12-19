@@ -1,0 +1,86 @@
+
+version: "3.8"
+
+services:
+  app:
+    build: ./main
+    env_file:
+      - .env
+    command: >
+      sh -c "iptables -P FORWARD DROP &&
+      python manage.py start_wireguard &&
+      gunicorn core.wsgi:application --bind 0.0.0.0:8000 &
+      python manage.py bot &
+      celery -A core worker --beat"
+    container_name: app
+    mem_limit: 290m
+    depends_on:
+      - redis
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "51820:51820/udp"
+    expose:
+      - "8000/tcp"
+    hostname: app
+    volumes:
+      - ./main/data:/usr/src/app/data
+      - static_volume:/usr/src/app/staticfiles
+    networks:
+      wireguard-network:
+        ipv4_address: 10.10.10.251
+    restart: always
+
+  redis:
+    container_name: redis
+    mem_limit: 15m
+    hostname: redis
+    image: redis:alpine
+    networks:
+      wireguard-network:
+        ipv4_address: 10.10.10.252
+    expose:
+      - "6379"
+    restart: always
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    mem_limit: 20m
+    hostname: nginx
+    volumes:
+      - static_volume:/usr/src/app/staticfiles
+    expose:
+      - "80/tcp"
+    depends_on:
+      - app
+    networks:
+      wireguard-network:
+        ipv4_address: 10.10.10.250
+    restart: always
+
+  pihole:
+    image: pihole/pihole
+    container_name: pihole
+    mem_limit: 90m
+    environment:
+      - WEBPASSWORD=Brightside111
+      - WEB_PORT=51899
+    volumes:
+      - './pihole/etc-pihole:/etc/pihole'
+      - './pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+    expose:
+      - "53/udp"
+      - "51899:51899/tcp"
+    restart: always
+    networks:
+      wireguard-network:
+        ipv4_address: 10.10.10.10
+
+networks:
+  wireguard-network:
+    ipam:
+      config:
+        - subnet: 10.10.10.0/24
+volumes:
+  static_volume:

@@ -1,0 +1,31 @@
+{% extends "modeladmin/inspect.html" %}
+{% load django_wireguard_filters %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    {{ block.super }}
+		<header class="color-teal" style="margin-top: 20px">
+			<div class="row nice-padding">
+				<h2>{% trans "Configuration" %}</h2>
+			</div>
+		</header>
+		<div class="row nice-padding">
+			<div class="col6" style="margin-top: 20px; padding-left: 0">
+				<textarea readonly style="resize: none; height: 256px; white-space: pre;" id="config">{{ instance.get_config }}</textarea>
+				<div style="display: flex; margin-top: 20px">
+					<button class="button bicolor button--icon copy-to-clipboard" data-target="#config">
+						<span class="icon-wrapper"><svg class="icon icon-doc-full" aria-hidden="true" focusable="false"><use href="#icon-doc-full"></use></svg></span>
+						{% trans "Copy to clipboard" %}
+					</button>
+					<a class="button bicolor button--icon" href="data:text/plain;base64,{{ instance.get_config|base64encode }}" download="{{ instance.name|slugify }}.conf">
+						<span class="icon-wrapper"><svg class="icon icon-download" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg></span>
+						{% trans "Download" %}
+					</a>
+				</div>
+			</div>
+			<div class="col6" style="margin-top: 20px; display: flex">
+				<div id="qrcode" style="margin: auto"></div>
+			</div>
+		</div>
+{% endblock %}

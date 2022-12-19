@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-04 18:19+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: bot/management/commands/bot.py:31 bot/management/commands/bot.py:51
+msgid "👨 Profile"
+msgstr "👨 Профиль"
+
+#: bot/management/commands/bot.py:31 bot/management/commands/bot.py:69
+msgid "💾 Download config"
+msgstr "💾 Скачать конфиг"
+
+#: bot/management/commands/bot.py:31 bot/management/commands/bot.py:85
+msgid "🔑 Update config"
+msgstr "🔑 Обновить конфиг"
+
+#: bot/management/commands/bot.py:32 bot/management/commands/bot.py:103
+msgid "💪 Additional config"
+msgstr "💪 Дополнительный конфиг"
+
+#: bot/management/commands/bot.py:32 bot/management/commands/bot.py:60
+msgid "📖 Instruction"
+msgstr "📖 Инструкция"
+
+#: bot/management/commands/bot.py:32 bot/management/commands/bot.py:100
+msgid "💰 How to pay"
+msgstr "💰 Как оплатить"
+
+#: bot/management/commands/bot.py:34
+msgid "📃 Use the keyboard below."
+msgstr "📃 Используйсте клавиатуру ниже."
+
+#: bot/management/commands/bot.py:53
+#, python-format
+msgid ""
+"%(status)s <b>%(name)s</b>\n"
+"📅 Active until: %(activity_until)s\n"
+"💰 Balance: %(balance)s %(CURRENCY)s\n"
+"🍀 Payment: %(tariff)s %(CURRENCY)s/month\n"
+"📱 Number of configs: %(number_of_peers)s"
+msgstr ""
+"%(status)s <b>%(name)s</b>\n"
+"📅 Активно до: %(activity_until)s\n"
+"💰 Баланс: %(balance)s %(CURRENCY)s\n"
+"🍀 Платеж: %(tariff)s %(CURRENCY)s/мес\n"
+"📱 Количество конфигов: %(number_of_peers)s"
+
+#: bot/management/commands/bot.py:61
+msgid ""
+"To use the config, you need to install the WireGuard VPN client and upload "
+"the resulting file to it.\n"
+"On the sent file, click \"Save to download\", then run the WireGuard "
+"program, click the add icon (\"+\" icon), select the configuration file (it "
+"will be saved to download to the Telegram folder), and everything is ready, "
+"turn it on, and you can work!\n"
+"Link to installers for all devices is here ->\n"
+"https://www.wireguard.com/install/"
+msgstr ""
+"Для использования конфига необходимо установить WireGuard VPN клиент, и "
+"загрузить в него полученный файл.\n"
+"На присланном файле нажимаете \"Сохранить в загрузки\", далее запускаете "
+"программу WireGuard, нажимаете иконку добавить (иконка \"+\"), выбираете "
+"файл конфигурации (он сохранится в загрузки в папку Telegram), и всё готово, "
+"включаете, и можно работать!\n"
+"Ссылка на инсталляторы для всех устройств тут ->\n"
+"https://www.wireguard.com/install/"
+
+#: bot/management/commands/bot.py:72 bot/management/commands/bot.py:88
+msgid "You don't have config files."
+msgstr "У Вас нет конфигурационных файлов."
+
+#: bot/management/commands/bot.py:77 bot/management/commands/bot.py:92
+msgid "Set config:"
+msgstr "Выберите конфиг:"
+
+#: bot/management/commands/bot.py:83 bot/management/commands/bot.py:98
+#: bot/management/commands/bot.py:158 bot/management/commands/bot.py:170
+#: bot/management/commands/bot.py:227 bot/management/commands/bot.py:241
+msgid "-Cancel-"
+msgstr "-Отмена-"
+
+#: bot/management/commands/bot.py:101
+#, python-format
+msgid "I accept a payment on SBP of Yoomoney on my phone %(phone)s"
+msgstr "Я принимаю платеж на Юмани через СБП на телефон %(phone)s"
+
+# python-format
+#: bot/management/commands/bot.py:108
+#, python-format
+msgid ""
+"An additional config costs %(cost_of_per_excess_peer)s %(CURRENCY)s/month, "
+"now %(cost)s %(CURRENCY)s will be debited from the balance, the payment will "
+"%(payment)s %(CURRENCY)s/month, the date activity will %(activity_until)s, "
+"and the balance will %(balance)s %(CURRENCY)s."
+msgstr ""
+"Дополнительный конфиг стоит %(cost_of_per_excess_peer)s %(CURRENCY)s/месяц, "
+"сейчас с баланса спишется %(cost)s %(CURRENCY)s, VPN будет активен до "
+"%(activity_until)s, и на балансе останется %(balance)s %(CURRENCY)s, далее "
+"платеж будет составлять %(payment)s %(CURRENCY)s/month."
+
+#: bot/management/commands/bot.py:121
+msgid "Yes, I want an additional config"
+msgstr "Да, я хочу дополнительный конфиг"
+
+#: bot/management/commands/bot.py:126
+msgid "No"
+msgstr "Нет"
+
+#: bot/management/commands/bot.py:129
+#, python-format
+msgid "%(text_check)s"
+msgstr ""
+
+#: bot/management/commands/bot.py:152
+#, python-format
+msgid "Set DNS (<u>%(name)s</u>):"
+msgstr "Выберите DNS (<u>%(name)s</u>):"
+
+#: bot/management/commands/bot.py:164
+#, python-format
+msgid "Set networks for VPN (<u>%(name)s</u>):"
+msgstr ""
+"Выберите сети,\n"
+"которые будут использоваться для VPN (<u>%(name)s</u>):"
+
+#: bot/management/commands/bot.py:176
+#, python-format
+msgid ""
+"Are you sure? After updating the keys, the old config will no longer work "
+"(<u>%(name)s</u>). Use it if you really need it."
+msgstr ""
+"Вы уверены? После обновления ключей, старый конфиг перестанет работать "
+"(<u>%(name)s</u>). Используйте это, если это Вам дейстивельно нужно."
+
+#: bot/management/commands/bot.py:180
+msgid "Yes"
+msgstr "Да"
+
+#: bot/management/commands/bot.py:181
+msgid "No!!!"
+msgstr "Нет!!!"
+
+#: bot/management/commands/bot.py:194
+#, python-format
+msgid "It's update (<u>%(name)s</u>)! What's next?"
+msgstr "Конфиг обновлен (<u>%(name)s</u>)! Что дальше?"
+
+#: bot/management/commands/bot.py:198 bot/management/commands/bot.py:240
+msgid "Download config"
+msgstr "Скачать конфиг"
+
+#: bot/management/commands/bot.py:201
+msgid "Update more"
+msgstr "Изменить еще"
+
+#: bot/management/commands/bot.py:202
+msgid "Exit"
+msgstr "Выйти"
+
+#: bot/management/commands/bot.py:218
+#, python-format
+msgid "What to update (<u>%(name)s</u>)?"
+msgstr "Что хотите обновить (<u>%(name)s</u>)?"
+
+#: bot/management/commands/bot.py:220
+msgid "Update DNS"
+msgstr "Изменить DNS"
+
+#: bot/management/commands/bot.py:220
+msgid "Update Allowed networks"
+msgstr "Изменить сети для VPN"
+
+#: bot/management/commands/bot.py:221
+msgid "Update Keys"
+msgstr "Обновить ключи"
+
+#: bot/management/commands/bot.py:236
+#, python-format
+msgid "Config %(name)s is added."
+msgstr "Конфиг %(name)s добавлен."

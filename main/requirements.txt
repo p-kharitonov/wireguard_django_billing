@@ -1,0 +1,11 @@
+celery
+cryptography
+Django
+pyroute2
+pyTelegramBotAPI
+python-dateutil
+redis
+gunicorn
+qrcode
+Pillow
+djangorestframework

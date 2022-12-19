@@ -1,0 +1,37 @@
+{% extends "admin/change_form.html" %}
+{% load i18n static %}
+{% load django_wireguard_filters %}
+
+{% block object-tools-items %}
+	{% if original %}
+		<li>
+		{% if original.is_active %}
+			<a href="#" style="background-color: green;" title="Last handshake {{ original.get_latest_handshake|date:'Y-m-d H:i:s'}}">Now active</a>
+		{% else %}
+			<a href="#" style="background-color: red;" title="Last handshake {{ original.get_latest_handshake|date:'Y-m-d H:i:s'}}">Now unactive</a>
+		{% endif %}
+		</li>
+	{% endif %}
+	{{ block.super }}
+	{% if original %}
+		<li>
+			<a href="data:text/plain;base64,{{ original.get_config|base64encode }}" download="{{ original.name|slugify }}.conf" class="golink" style="background-color: #417690;">{% trans "Download Config" %}</a>
+		</li>
+	{% endif %}
+{% endblock %}
+
+{% block after_field_sets %}
+	{% if original %}
+		<h1>Configuration</h1>
+		<textarea rows="10" class="form-control" id="config" style="width: 100%;resize: none;" readonly>{{ original.get_config }}</textarea>
+	  <div id="qrcode" style="margin: 60px;"></div>
+	{% endif %}
+{% endblock %}
+
+{% block admin_change_form_document_ready %}
+	{{ block.super }}
+	{% if original %}
+		<script src="{% static "js/qrcode.min.js" %}"></script>
+		<script src="{% static "js/inject_qrcode.js" %}"></script>
+	{% endif %}
+{% endblock %}

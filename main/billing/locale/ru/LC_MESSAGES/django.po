@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-04 18:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: billing/models.py:13
+msgid "Administrator"
+msgstr ""
+
+#: billing/models.py:14
+msgid "Status"
+msgstr "Статус"
+
+#: billing/models.py:15
+msgid "Payment name"
+msgstr "Имя платежа"
+
+#: billing/models.py:16
+msgid "For Payment"
+msgstr "Для платежа"
+
+#: billing/models.py:17
+msgid "NickName"
+msgstr "Никнейм"
+
+#: billing/models.py:17
+msgid "For Config"
+msgstr "Для конфига"
+
+#: billing/models.py:19 billing/models.py:167
+msgid "Tariff"
+msgstr "Тариф"
+
+#: billing/models.py:20 billing/models.py:230
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: billing/models.py:21
+msgid "Activity until"
+msgstr "Активно до"
+
+#: billing/models.py:22
+msgid "Balance"
+msgstr "Баланс"
+
+#: billing/models.py:23
+msgid "Telegram ID"
+msgstr "Телеграм ID"
+
+#: billing/models.py:24 billing/models.py:144
+msgid "Peers"
+msgstr ""
+
+#: billing/models.py:33 billing/models.py:139 billing/models.py:233
+msgid "User"
+msgstr "Пользователь"
+
+#: billing/models.py:34
+msgid "Users"
+msgstr "Пользователи"
+
+#: billing/models.py:110
+#, python-format
+msgid ""
+"An additional config costs %(cost_of_per_excess_peer)s %(CURRENCY)s/month, "
+"now you need pay %(cost_for_adding_peer)s %(CURRENCY)s."
+msgstr ""
+"Дополнительный конфиг стоит %(cost_of_per_excess_peer)s %(CURRENCY)s/мес, "
+"сейчас Вам необходимо доплатить %(cost_for_adding_peer)s %(CURRENCY)s."
+
+#: billing/models.py:118
+msgid "You have max number of configs."
+msgstr "У Вас максимальное количество конфигов."
+
+#: billing/models.py:140 billing/models.py:143
+msgid "Peer"
+msgstr ""
+
+#: billing/models.py:154 billing/models.py:179
+msgid "Name"
+msgstr "Имя"
+
+#: billing/models.py:155
+msgid "Cost"
+msgstr "Стоимость"
+
+#: billing/models.py:156
+msgid "Number of peers"
+msgstr "Количество пиров"
+
+#: billing/models.py:157
+msgid "Max number of peers"
+msgstr "Максимальное количество пиров"
+
+#: billing/models.py:158
+msgid "Cost of per excess peer"
+msgstr "Цена за каждого дополнительного пира"
+
+#: billing/models.py:168
+msgid "Tariffs"
+msgstr "Тарифы"
+
+#: billing/models.py:180
+msgid "Token"
+msgstr "Токен"
+
+#: billing/models.py:189
+msgid "Payment Gateway"
+msgstr "Платежный шлюз"
+
+#: billing/models.py:190
+msgid "Payment Gateways"
+msgstr "Платежные шлюзы"
+
+#: billing/models.py:229
+msgid "Operation ID"
+msgstr "ID операции"
+
+#: billing/models.py:231
+msgid "Amount"
+msgstr "Сумма"
+
+#: billing/models.py:234
+msgid "Comment"
+msgstr "Комментарий"
+
+#: billing/models.py:240
+msgid "Payment"
+msgstr "Платеж"
+
+#: billing/models.py:241
+msgid "Payments"
+msgstr "Платежи"
